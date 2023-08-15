@@ -57,6 +57,26 @@ public class CDB extends SQLiteOpenHelper {
         }
         return recList;
     }
+
+    public List<CLogin> getvalues(String un){
+        List<CLogin> recList = new ArrayList<CLogin>();
+        String selectQuery="select * from login where username='"+un+"'";
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery(selectQuery,null);
+        if(cursor.moveToFirst()){
+            do{
+                CLogin rec=new CLogin();
+                rec.name=cursor.getString(0);
+                rec.username=cursor.getString(1);
+                rec.password=cursor.getString(2);
+                recList.add(rec);
+
+            }while(cursor.moveToNext());
+        }
+        return recList;
+    }
+
+
     public List<CLogin> Search(){
         List<CLogin> recList = new ArrayList<CLogin>();
         String selectQuery="select * from login";

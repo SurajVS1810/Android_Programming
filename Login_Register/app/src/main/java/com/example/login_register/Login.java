@@ -32,7 +32,8 @@ public class Login extends AppCompatActivity {
         startActivity(obj);
     }
     public void onSignout(View v){
-        
+        Intent obj=new Intent("android.intent.action.MAIN");
+        startActivity(obj);
     }
 
 }

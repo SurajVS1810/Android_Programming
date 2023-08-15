@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent obj = new Intent("act_login");
                     obj.putExtra("name",cr.name);
                     obj.putExtra("un",cr.username);
-                    obj.putExtra("pw",cr.username);
+                    obj.putExtra("pw",cr.password);
                     startActivity(obj);
                 }
             }
