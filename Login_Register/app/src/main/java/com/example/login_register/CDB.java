@@ -74,4 +74,11 @@ public class CDB extends SQLiteOpenHelper {
         }
         return recList;
     }
+    public void update(String np,String un){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues values =  new ContentValues();
+        values.put("password",np);
+        db.update("login",values,"username=?",new String[]{String.valueOf(un)});
+        db.close();
+    }
 }
