@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 // TODO Auto-generated method stub
                     try{
 
-                        String link = "http://172.16.2.58/android/test.php?eno=" + e1.getText().toString();
+                        String link = "http://172.16.2.59/sweaba_android/test.php?eno=" + e1.getText().toString();
 
                         URL url = new URL(link);
                         HttpClient client = new DefaultHttpClient();
