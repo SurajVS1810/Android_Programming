@@ -94,6 +94,13 @@ public class CDB extends SQLiteOpenHelper {
         }
         return recList;
     }
+
+    public int deleteuser(String username)
+    {
+        SQLiteDatabase db=this.getWritableDatabase();
+        return db.delete("login","username=?",new String[] {String.valueOf(username)});
+    }
+
     public void update(String np,String un){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values =  new ContentValues();

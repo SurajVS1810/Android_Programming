@@ -55,6 +55,8 @@ public class Register extends AppCompatActivity {
                     e2.setText("");
                     e3.setText("");
                     Toast.makeText(this, "Registered Successfully", Toast.LENGTH_LONG).show();
+                    Intent obj=new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(obj);
                 } else {
                     Toast.makeText(this, "password is not same", Toast.LENGTH_LONG).show();
                 }

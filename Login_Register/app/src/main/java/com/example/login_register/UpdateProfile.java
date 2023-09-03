@@ -12,7 +12,6 @@ import java.util.List;
 
 public class UpdateProfile extends AppCompatActivity {
     EditText e1,e2,e3;
-
     CDB db;
     String s1,s2,s3,s4;
     @Override
@@ -38,7 +37,7 @@ public class UpdateProfile extends AppCompatActivity {
                 s3=cr.username;
                 s4=cr.password;
         }
-        
+
         if(op.equals("")||np.equals("")||cp.equals("")){
             Toast.makeText(this, "Fill the requirements", Toast.LENGTH_LONG).show();
         }
@@ -60,9 +59,6 @@ public class UpdateProfile extends AppCompatActivity {
             }
         }
     }
-    public void onBack(View v){
-        Intent obj=new Intent("act_login");
-        startActivity(obj);
-    }
+
 
 }
