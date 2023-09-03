@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
-    TextView t;
+    TextView t,tprofile;
     CDB db;
     String s2,s3,s1;
     @Override
@@ -19,10 +19,12 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login);
         db=new CDB(this);
         t=(TextView)findViewById(R.id.t1);
+        tprofile=(TextView)findViewById(R.id.tprofile);
         Bundle b=getIntent().getExtras();
         s1=b.getString("name");
         s2=b.getString("un");
         s3=b.getString("pw");
+        tprofile.setText(s2);
         t.setText("Welcome "+s1+"\n To Food Court");
     }
 
@@ -39,6 +41,7 @@ public class Login extends AppCompatActivity {
     }
     public void onBurger(View v){
         Intent obj=new Intent("act_burger");
+        obj.putExtra("un",s2);
         startActivity(obj);
     }
 

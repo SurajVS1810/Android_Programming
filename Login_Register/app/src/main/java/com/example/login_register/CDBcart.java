@@ -17,22 +17,24 @@ public class CDBcart extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table cart(dno integer primary key autoincrement,foodname text,dloc text)");
+        db.execSQL("create table cart(c_id integer primary key autoincrement,foodname text,quantity text,price text,FOREIGN KEY(username) references login(username))");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("drop table if exists login");
+        db.execSQL("drop table if exists cart");
         onCreate(db);
     }
-    public void Insert(CLogin cl){
+    public void Insert(Ccart cl){
         try{
             SQLiteDatabase db=this.getWritableDatabase();
             ContentValues cv=new ContentValues();
-            cv.put("name",cl.name);
+            cv.put("c_id",cl.c_id);
+            cv.put("foodname",cl.foodname);
+            cv.put("quantity",cl.quantity);
+            cv.put("price",cl.price);
             cv.put("username",cl.username);
-            cv.put("password",cl.password);
-            db.insert("login",null,cv);
+            db.insert("cart",null,cv);
             db.close();
         }
         catch(Exception e){

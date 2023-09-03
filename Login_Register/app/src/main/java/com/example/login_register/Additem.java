@@ -12,21 +12,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 
 public class Additem extends AppCompatActivity {
-    TextView t6,t7,t8;
+    TextView t4,t6,t7,t8,tprofile;
     CDB db;
+    CDBcart dbcart;
+    String s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buger);
         db=new CDB(this);
+        dbcart=new CDBcart(this);
+        Bundle b=getIntent().getExtras();
+        s=b.getString("un");
         t6=(TextView)findViewById(R.id.t6);
         t7=(TextView)findViewById(R.id.t7);
         t8=(TextView)findViewById(R.id.t8);
-
+        t4=(TextView)findViewById(R.id.t4);
+        tprofile=(TextView)findViewById(R.id.tprofile);
+        tprofile.setText(s);
     }
     public void AddCart(View v){
-
+        Ccart rec=new Ccart();
+        rec.foodname=t4.getText().toString();
+        rec.price=t8.getText().toString();
+        rec.quantity=t7.getText().toString();
+        rec.username=tprofile.getText().toString();
+        dbcart.Insert(rec);
+        Toast.makeText(this, "Successfully Added to cart", Toast.LENGTH_LONG).show();
+        finishAndRemoveTask();
     }
 
     public void Add(View v){
