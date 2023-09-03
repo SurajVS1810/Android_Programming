@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
         s1=b.getString("name");
         s2=b.getString("un");
         s3=b.getString("pw");
-        t.setText("Welcome "+s1);
+        t.setText("Welcome "+s1+"\n To Food Court");
     }
 
     public void onSignout(View v){
@@ -37,5 +37,10 @@ public class Login extends AppCompatActivity {
         obj.putExtra("pw",s3);
         startActivity(obj);
     }
+    public void onBurger(View v){
+        Intent obj=new Intent("act_burger");
+        startActivity(obj);
+    }
+
 
 }
