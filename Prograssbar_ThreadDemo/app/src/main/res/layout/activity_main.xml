@@ -13,27 +13,30 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
-        <EditText
-            android:id="@+id/e1"
+        <ProgressBar
+            android:id="@+id/pb1"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="" />
+            android:layout_height="wrap_content" />
 
-        <EditText
-            android:id="@+id/e2"
+        <ProgressBar
+            android:id="@+id/pb2"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="" />
+            android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/blogin"
+            android:id="@+id/b1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:onClick="onLogin"/>
+            android:text="Text"
+            android:onClick="onB1"/>
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thread Progress"
+            android:onClick="onB2"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
