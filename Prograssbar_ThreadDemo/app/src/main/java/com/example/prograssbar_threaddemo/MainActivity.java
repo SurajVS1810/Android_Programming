@@ -30,6 +30,15 @@ public class MainActivity extends AppCompatActivity implements Runnable {
         }
     }
     public void onB2(View v){
+        pv=0;
+        pb2.setEnabled(true);
+        Thread t;
+        t=new Thread(this);
+        t.start();
+    }
+
+    @Override
+    public void run() {
         try{
             while(pv<=100){
                 Thread.sleep(200);
@@ -42,12 +51,7 @@ public class MainActivity extends AppCompatActivity implements Runnable {
 
         }
         catch(Exception e){
-            
+
         }
-    }
-
-    @Override
-    public void run() {
-
     }
 }
