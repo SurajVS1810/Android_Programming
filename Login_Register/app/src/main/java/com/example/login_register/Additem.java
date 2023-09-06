@@ -1,6 +1,8 @@
 package com.example.login_register;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,7 +16,6 @@ import java.util.List;
 public class Additem extends AppCompatActivity {
     TextView t4,t6,t7,t8,tprofile;
     CDB db;
-    CDBcart dbcart;
     String s;
 
     @Override
@@ -22,7 +23,6 @@ public class Additem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.buger);
         db=new CDB(this);
-        dbcart=new CDBcart(this);
         Bundle b=getIntent().getExtras();
         s=b.getString("un");
         t6=(TextView)findViewById(R.id.t6);
@@ -38,9 +38,17 @@ public class Additem extends AppCompatActivity {
         rec.price=t8.getText().toString();
         rec.quantity=t7.getText().toString();
         rec.username=tprofile.getText().toString();
-        dbcart.Insert(rec);
+        db.AddCart(rec);
         Toast.makeText(this, "Successfully Added to cart", Toast.LENGTH_LONG).show();
-        finishAndRemoveTask();
+//        finishAndRemoveTask();
+//        SharedPreferences sp;
+//        sp=getSharedPreferences("SD", Context.MODE_PRIVATE);
+//        SharedPreferences.Editor ed=sp.edit();
+//        ed.putString("un",ed1.getText().toString());
+//        ed.putString("up",ed2.getText().toString());
+//        ed.commit();
+//        Intent obj=new Intent("act_cart");
+//        obj.putExtra("un",s);
     }
 
     public void Add(View v){

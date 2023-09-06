@@ -12,6 +12,7 @@
         android:layout_width="189dp"
         android:layout_height="51dp"
         android:text=""
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
@@ -30,7 +31,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.935"
-        app:srcCompat="@drawable/cart" />
+        app:srcCompat="@drawable/cart"
+        android:onClick="onCart"/>
 
     <ImageButton
         android:id="@+id/iprofile"
@@ -57,7 +59,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.934"
-        app:srcCompat="@drawable/order" />
+        app:srcCompat="@drawable/order"
+        android:onClick="onOrder"/>
 
     <ImageButton
         android:id="@+id/isignout"
@@ -301,8 +304,8 @@
 
     <TextView
         android:id="@+id/tprofile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="47dp"
+        android:layout_height="17dp"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

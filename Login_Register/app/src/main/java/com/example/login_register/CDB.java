@@ -19,13 +19,52 @@ public class CDB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table login(name text,username varchar2(30) primary key,password varchar2(30))");
+        db.execSQL("create table cart(c_id integer primary key autoincrement,foodname text,quantity text,price text,username text references login(username))");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("drop table if exists login");
+        db.execSQL("drop table if exists cart");
         onCreate(db);
     }
+
+    public List<Ccart> getcart(String un){
+        List<Ccart> recList = new ArrayList<Ccart>();
+        String selectQuery="select * from cart where username='"+un+"'";
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery(selectQuery,null);
+        if(cursor.moveToFirst()){
+            do{
+                Ccart rec=new Ccart();
+                rec.foodname=cursor.getString(3);
+                rec.username=cursor.getString(1);
+                rec.quantity=cursor.getString(2);
+                recList.add(rec);
+
+            }while(cursor.moveToNext());
+        }
+        return recList;
+    }
+
+    public void AddCart(Ccart cl){
+        try{
+            SQLiteDatabase db=this.getWritableDatabase();
+            ContentValues cv=new ContentValues();
+            cv.put("c_id",cl.c_id);
+            cv.put("foodname",cl.foodname);
+            cv.put("quantity",cl.quantity);
+            cv.put("price",cl.price);
+            cv.put("username",cl.username);
+            db.insert("cart",null,cv);
+            db.close();
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+    }
+
+
     public void Insert(CLogin cl){
         try{
             SQLiteDatabase db=this.getWritableDatabase();
