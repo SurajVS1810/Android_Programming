@@ -16,7 +16,7 @@ import java.util.List;
 public class Cart extends AppCompatActivity {
     TextView t1;
     CDB db;
-    String s;
+    String s,cart;
     SharedPreferences sp;
 
     @Override
@@ -26,22 +26,24 @@ public class Cart extends AppCompatActivity {
         db=new CDB(this);
         Bundle b=getIntent().getExtras();
         s=b.getString("un");
+        cart=b.getString("cart");
+
 //        rec=b.getParcelableArray("rec");
 
         t1=(TextView)findViewById(R.id.t1);
-
+        t1.setText(cart);
       //  sp=getSharedPreferences("SD", Context.MODE_PRIVATE);
 //        ed1.setText(sp.getString("un","").toString());
 //        ed2.setText(sp.getString("up","").toString());
     }
     public void show(View v){
-        List<Ccart> rec=db.getcart(s);
-        String str="";
-        for(Ccart cr:rec){
-            String log="Dname: "+cr.foodname;
-            log=log+"\n";
-            str=str+log;
-        }
-        t1.setText(str);
+//        List<Ccart> rec=db.getcart(s);
+//        String str="";
+//        for(Ccart cr:rec){
+//            String log="Dname: "+cr.foodname;
+//            log=log+"\n";
+//            str=str+log;
+//        }
+//        t1.setText(cart);
     }
 }

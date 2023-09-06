@@ -17,6 +17,7 @@ public class Login extends AppCompatActivity {
     TextView t,tprofile;
     CDB db;
     String s2,s3,s1;
+    List<Ccart> recList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +50,16 @@ public class Login extends AppCompatActivity {
         startActivity(obj);
     }
     public void onCart(View v){
-
+        List<Ccart> rec=db.getcart(s2);
+        String str="";
+        for(Ccart cr:rec){
+            String log="Foodname: "+cr.foodname+"c_id: "+cr.c_id+"Quantity: "+cr.quantity+"Price: "+cr.price+"username: "+cr.username;
+            log=log+"\n";
+            str=str+log;
+        }
         Intent obj=new Intent("act_cart");
         obj.putExtra("un",s2);
+        obj.putExtra("cart",str);
         startActivity(obj);
     }
 

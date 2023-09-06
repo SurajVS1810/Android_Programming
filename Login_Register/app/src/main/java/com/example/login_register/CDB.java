@@ -37,9 +37,11 @@ public class CDB extends SQLiteOpenHelper {
         if(cursor.moveToFirst()){
             do{
                 Ccart rec=new Ccart();
-                rec.foodname=cursor.getString(3);
-                rec.username=cursor.getString(1);
+                rec.c_id=cursor.getInt(0);
+                rec.foodname=cursor.getString(1);
                 rec.quantity=cursor.getString(2);
+                rec.price=cursor.getString(3);
+                rec.username=cursor.getString(4);
                 recList.add(rec);
 
             }while(cursor.moveToNext());
