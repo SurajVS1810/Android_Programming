@@ -36,14 +36,5 @@ public class Cart extends AppCompatActivity {
 //        ed1.setText(sp.getString("un","").toString());
 //        ed2.setText(sp.getString("up","").toString());
     }
-    public void show(View v){
-//        List<Ccart> rec=db.getcart(s);
-//        String str="";
-//        for(Ccart cr:rec){
-//            String log="Dname: "+cr.foodname;
-//            log=log+"\n";
-//            str=str+log;
-//        }
-//        t1.setText(cart);
-    }
+
 }
