@@ -17,7 +17,7 @@ public class Cart extends AppCompatActivity {
     TextView t1;
     CDB db;
     String s,cart;
-    SharedPreferences sp;
+//    SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
