@@ -15,7 +15,7 @@
         android:drawableStart="@drawable/ic_profile"
         android:background="@drawable/custom_input"
         android:drawablePadding="12dp"
-        android:hint="username"
+        android:hint="Username"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:inputType="textPersonName"

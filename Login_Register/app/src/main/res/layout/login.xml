@@ -23,8 +23,9 @@
 
     <ImageButton
         android:id="@+id/icart"
-        android:layout_width="76dp"
-        android:layout_height="64dp"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:onClick="onCart"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,27 +33,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.935"
-        app:srcCompat="@drawable/cart"
-        android:onClick="onCart"/>
+        app:srcCompat="@drawable/cart" />
 
     <ImageButton
         android:id="@+id/iprofile"
-        android:layout_width="71dp"
-        android:layout_height="62dp"
+        android:layout_width="52dp"
+        android:layout_height="45dp"
         android:onClick="onProfile"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.934"
+        app:layout_constraintVertical_bias="0.932"
         app:srcCompat="@drawable/profile" />
 
     <ImageButton
         android:id="@+id/iorder"
-        android:layout_width="69dp"
-        android:layout_height="63dp"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        android:onClick="onOrder"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,21 +61,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.934"
-        app:srcCompat="@drawable/order"
-        android:onClick="onOrder"/>
+        app:srcCompat="@drawable/order" />
 
     <ImageButton
         android:id="@+id/isignout"
-        android:layout_width="64dp"
-        android:layout_height="62dp"
+        android:layout_width="45dp"
+        android:layout_height="42dp"
         android:onClick="onSignout"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932"
+        app:layout_constraintVertical_bias="0.933"
         app:srcCompat="@drawable/signout" />
 
     <ImageButton
@@ -205,10 +205,10 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.774" />
+        app:layout_constraintVertical_bias="0.78" />
 
     <TextView
         android:id="@+id/t3"
@@ -223,7 +223,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.293" />
+        app:layout_constraintVertical_bias="0.288" />
 
     <TextView
         android:id="@+id/t4"
@@ -235,10 +235,10 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintVertical_bias="0.531" />
 
     <TextView
         android:id="@+id/t5"
@@ -283,7 +283,7 @@
         app:layout_constraintHorizontal_bias="0.902"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <TextView
         android:id="@+id/t8"
@@ -295,10 +295,10 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.292" />
 
     <TextView
         android:id="@+id/t9"
@@ -310,10 +310,10 @@
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.927"
+        app:layout_constraintHorizontal_bias="0.921"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.774" />
+        app:layout_constraintVertical_bias="0.779" />
 
     <TextView
         android:id="@+id/t10"
@@ -332,39 +332,39 @@
 
     <TextView
         android:id="@+id/tprofile"
-        android:layout_width="47dp"
-        android:layout_height="17dp"
-        android:text=""
+        android:layout_width="54dp"
+        android:layout_height="20dp"
         android:gravity="center"
+        android:text=""
         android:textColor="@color/Violet"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.095"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.966" />
+        app:layout_constraintVertical_bias="0.964" />
 
     <TextView
         android:id="@+id/tcart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cart"
         android:gravity="center"
+        android:text="Cart"
         android:textColor="@color/Violet"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.394"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.966" />
+        app:layout_constraintVertical_bias="0.967" />
 
     <TextView
         android:id="@+id/torder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Orders"
+        android:text="Orders"
         android:gravity="center"
         android:textColor="@color/Violet"
         android:textSize="15dp"
