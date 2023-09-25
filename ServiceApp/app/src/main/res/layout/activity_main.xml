@@ -16,26 +16,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="407dp"
-        android:layout_height="729dp"
+        android:layout_width="410dp"
+        android:layout_height="732dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
-        <EditText
-            android:id="@+id/t1"
+        <Button
+            android:id="@+id/bstart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="http://lakis.web.elte.hu/szh201516I/gy7/bgnet_A4.pdf" />
+            android:text="Start"
+            android:onClick="onStart"/>
 
         <Button
-            android:id="@+id/b1"
+            android:id="@+id/bstop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Download"
-            android:onClick="onStartDownload"/>
+            android:text="Stop"
+            android:onClick="onStop"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
