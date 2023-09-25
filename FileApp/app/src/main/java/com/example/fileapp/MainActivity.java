@@ -46,11 +46,13 @@ public class MainActivity extends AppCompatActivity {
             FileInputStream fin;
             fin=openFileInput(e1.getText().toString());
             InputStreamReader isw=new InputStreamReader(fin);
-            char[] b=new char[10];
-            int n=isw.read(b,0,10);
+            int l=(int)fin.available();
+            char[] b=new char[l];
+            int n=isw.read(b,0,l);
             String str=new String(b,0,n);
             e2.setText(str);
             isw.close();
+
 
         }catch(FileNotFoundException e){
             e.printStackTrace();
